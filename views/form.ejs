@@ -1,0 +1,27 @@
+<!-- views/form.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Optional: For styling -->
+</head>
+<body>
+  <h1><%= title %></h1>
+
+  <form method="POST" action="/new">
+    <div>
+      <label for="messageUser">Name:</label>
+      <input type="text" id="messageUser" name="messageUser" required>
+    </div>
+    <div>
+      <label for="messageText">Message:</label>
+      <textarea id="messageText" name="messageText" rows="4" cols="50" required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <a href="/">Back to Messages</a>
+</body>
+</html>

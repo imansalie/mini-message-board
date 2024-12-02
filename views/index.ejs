@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Optional: For styling -->
+</head>
+<body>
+  <h1><%= title %></h1>
+  
+  <a href="/new">Add a New Message</a>
+
+  <ul>
+    <% messages.forEach(function(message, index) { %> <!-- Include index here -->
+      <li>
+        <strong><%= message.user %></strong>: <%= message.text %>
+        <em>(<%= message.added.toLocaleString() %>)</em>
+        <!-- Open Link -->
+        <a href="/messages/<%= index %>">Open</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- views/message.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Optional: For styling -->
+</head>
+<body>
+  <h1>Message Details</h1>
+
+  <p><strong>User:</strong> <%= message.user %></p>
+  <p><strong>Message:</strong> <%= message.text %></p>
+  <p><strong>Added:</strong> <%= message.added.toLocaleString() %></p>
+
+  <a href="/">Back to Messages</a>
+</body>
+</html>
